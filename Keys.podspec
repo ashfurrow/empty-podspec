@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Keys"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Injected podspec used by CocoaPods-Keys plugin."
 
   s.description  = <<-DESC
@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
   s.license      = { :type => "MIT (does not apply to anything but podspec)", :file => "LICENSE" }
   s.author             = { "Ash Furrow" => "ash@ashfurrow.com" }
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/ashfurrow/empty-podspec.git", :tag => "1.0.0" }
+  s.source       = { :git => "https://github.com/ashfurrow/empty-podspec.git", :tag => "1.0.1" }
   s.source_files  = "%%SOURCE_FILES%%"
-  s.prepare_command =  "pod keys generate %%PROJECT_NAME%%"
+  s.prepare_command = %Q[pod keys generate "%%PROJECT_NAME%%"]
   s.framework  = "Foundation"
   s.requires_arc = true
 end
